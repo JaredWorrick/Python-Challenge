@@ -38,3 +38,13 @@ print(f"Greatest Increase in Profits: {total_months[mim]} (${(str(miv))})")
 print(f"Greatest Decrease in Profits: {total_months[mdm]} (${(str(mdv))})")
 
 #txt file
+import sys
+file = open('PyBank_Analysis.txt', 'a')
+sys.stdout = file
+print("Financial Analysis")
+print("----------------------------")
+print(f"Total Months: {len(total_months)}")
+print(f"Total: ${sum(total_profits)}")
+print(f"Average Change: ${round(sum(mprofit_change)/len(mprofit_change),2)}")
+print(f"Greatest Increase in Profits: {total_months[mim]} (${(str(miv))})")
+print(f"Greatest Decrease in Profits: {total_months[mdm]} (${(str(mdv))})")
